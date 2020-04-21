@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-/Users/nikstires/Projects/Keep It Alive!/Builds/v1.1/Keep It Alive!.exe
+/Users/nikstires/Projects/KeepItAlive/Builds/StayStokedv1.21w/Keep It Alive!.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/MainScene.unity
@@ -24,7 +24,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 8631e6746a2cd563d2d81cacda3e4ddd Assembly-CSharp.dll:.MainMenu
 d880b6c53f4aca465c46af557782925c Assembly-CSharp.dll:.Spawner
-8f0e1d2599b7f5606c679735d0f170a8 Assembly-CSharp.dll:.Player
+2011aaf19ed533d0b751f50120d985e4 Assembly-CSharp.dll:.Player
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -91,7 +91,7 @@ aa165095bcf0f4d99594ea33df01c81b UnityEngine.UI.dll:UnityEngine.UI.Slider
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-de3250416c2cd62f7ace43f5446a8119 Assembly-CSharp.dll:.Attack
+30f3213a6e218a461fa00e428f22d3eb Assembly-CSharp.dll:.Attack
 a5a60d0b9e6d53d72e12aef88e23ee68 AstarPathfindingProject.dll:Pathfinding.FunnelModifier
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -198,3 +198,4 @@ df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 c0e31dd31c35455f422978da26bb908a AstarPathfindingProject.dll:Pathfinding.Patrol
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 e798e063c11afbbf52fa1f32fc93ed37 Assembly-CSharp.dll:.Fire
+75e8fdfac2da034154328a56899c11ae Assembly-CSharp.dll:.AttackPos

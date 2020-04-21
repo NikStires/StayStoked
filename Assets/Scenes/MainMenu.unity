@@ -1252,10 +1252,14 @@ MonoBehaviour:
     Use the WASD or arrow keys to move
 
 
-    To pickup items press E
+    Press E to pick up the axe
+
+    Left click for attack
 
 
-    Press Space to use Items
+    Press Space to fuel the fire
+
+    if you have sticks...
 
 
     BETTER FUEL THAT FIRE!
@@ -1740,7 +1744,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1dc62a444344d4035935d907f9a1dac2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.294
   m_Pitch: 1
   Loop: 1
   Mute: 0

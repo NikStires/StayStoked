@@ -28,9 +28,9 @@ public class Player : MonoBehaviour
     public Collider2D[] objectsHit;
     public LayerMask selectObjectsToHit;
     public bool isAttacking;
-    private bool canAttack;
     public AudioSource attack;
     //Menus
+    public Text deathScreenScore;
     public GameObject HUD;
     public GameObject deathScreen;
     public Button restart;
@@ -40,7 +40,6 @@ public class Player : MonoBehaviour
     {
         curHP = maxHP;
         objectsHit = new Collider2D[maxObjectsHit];
-        canAttack = true;
         restart.onClick.AddListener(RestartGame);
         menu.onClick.AddListener(ReturnToMenu);
     }
@@ -55,15 +54,15 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             GetComponent<Collider2D>().enabled = false;
             deathScreen.transform.GetChild(1).gameObject.SetActive(true);
-            deathScreen.transform.GetChild(3).GetComponent<Text>().text = score.ToString();
+            deathScreenScore.text = score.ToString();
             deathScreen.SetActive(true);
         }
         fuelCountText.text = fuelCount.ToString();
         scoreText.text = "Score: " + score.ToString();
         healthBar.SetHealth(maxHP, curHP);
-        if(Input.GetKeyDown(KeyCode.Space) && hasItem)
+        if(Input.GetButtonDown("Fire1") && hasItem)
         {
-            if(heldItem.GetComponent<Item>().itemType == "Axe" && canAttack)
+            if(heldItem.GetComponent<Item>().itemType == "Axe")
             {
                 attack.Play();
                 Attack();
@@ -112,18 +111,10 @@ public class Player : MonoBehaviour
             pickupStick.Play();
             Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("HealZone") && other.gameObject.GetComponentInParent<Fire>().isLit)
-        {
-            canAttack = false;
-        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("HealZone") && other.gameObject.GetComponentInParent<Fire>().isLit)
-        {
-            canAttack = true;
-        }
     }
 
     private void Attack()
@@ -156,6 +147,7 @@ public class Player : MonoBehaviour
             transform.GetComponent<Collider2D>().enabled = false;
             HUD.SetActive(false);
             deathScreen.transform.GetChild(0).gameObject.SetActive(true);
+            deathScreenScore.text = score.ToString();
             deathScreen.SetActive(true);
         }
     }
